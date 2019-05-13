@@ -1,4 +1,4 @@
-# Definitions of Node
+# Definition of Node
 class Node :
     def __init__(self, key):
         self.key = key
@@ -8,7 +8,7 @@ class Node :
         self.color = None
         self.size = 1
 
-# Definitions of Tree
+# Definition of Tree
 class Tree :
     RED = 1
     BLACK = 0
@@ -18,13 +18,6 @@ class Tree :
 
     def __init__(self, root):
         self.root = root
-
-    def print_inorder(self, x):
-        if (x == self.nil) :
-            return
-        self.print_inorder(x.left)
-        print(x.key, ("RED" if x.color == Tree.RED else "BLACK"), x.size, "child", x.left.key, x.right.key)
-        self.print_inorder(x.right)
 
 # Function for left rotation
 def left_rotate(x):

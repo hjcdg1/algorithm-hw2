@@ -307,5 +307,7 @@ def check(opt_seq, val_seq, out_seq):
             else:
                 check_val = 0
         if (check_val != out):
+            print("my out_seq :", out_seq)
+            print("correct out_seq :", ans_seq)
             return False
     return True
